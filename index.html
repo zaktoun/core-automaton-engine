@@ -173,38 +173,41 @@
             </div>
             
             <!-- Payment Instructions -->
-            <div class="bg-indigo-600 rounded-3xl p-6 text-white mb-6">
+            <div class="bg-emerald-600 rounded-3xl p-6 text-white mb-6">
                 <p class="text-[10px] font-bold uppercase opacity-80 mb-2">Transfer Pembayaran Ke:</p>
                 <div class="flex justify-between items-center mb-4">
-                    <span class="font-bold text-lg">Bank Central Asia (BCA)</span>
-                    <i data-lucide="credit-card" class="w-5 h-5 opacity-50"></i>
+                    <span class="font-bold text-lg">Bank Syariah Indonesia (BSI)</span>
+                    <i data-lucide="shield-check" class="w-5 h-5 opacity-50"></i>
                 </div>
                 <div class="bg-white/10 p-4 rounded-2xl flex justify-between items-center mb-2">
-                    <span class="font-mono text-xl tracking-wider">123-456-7890</span>
-                    <button onclick="copyToClipboard('1234567890')" class="text-[10px] bg-white text-indigo-600 px-3 py-1 rounded-full font-bold">SALIN</button>
+                    <span class="font-mono text-xl tracking-wider">712-345-6789</span>
+                    <button onclick="copyToClipboard('7123456789')" class="text-[10px] bg-white text-emerald-600 px-3 py-1 rounded-full font-bold">SALIN</button>
                 </div>
                 <p class="text-xs font-medium">a.n Zaktoun Core Laboratory</p>
+                <p class="text-[10px] mt-2 opacity-70 italic text-white">*Gunakan kode bank 451 jika transfer dari bank lain.</p>
             </div>
 
             <form id="orderForm" class="space-y-4">
                 <input type="hidden" id="p-name">
                 <input type="hidden" id="p-price">
                 
-                <input type="text" id="c-name" placeholder="Nama Lengkap" required class="w-full p-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-indigo-500 outline-none">
-                <input type="email" id="c-email" placeholder="Alamat Email (Untuk Pengiriman Script)" required class="w-full p-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-indigo-500 outline-none">
-                <input type="tel" id="c-phone" placeholder="WhatsApp (Konfirmasi Pembayaran)" required class="w-full p-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-indigo-500 outline-none">
+                <input type="text" id="c-name" placeholder="Nama Lengkap" required class="w-full p-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-emerald-500 outline-none">
+                <input type="email" id="c-email" placeholder="Alamat Email (Untuk Pengiriman Script)" required class="w-full p-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-emerald-500 outline-none">
+                <input type="tel" id="c-phone" placeholder="WhatsApp (Aktif)" required class="w-full p-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-emerald-500 outline-none">
                 
-                <div class="p-4 bg-amber-50 rounded-2xl">
+                <div class="p-4 bg-amber-50 rounded-2xl border border-amber-100">
                     <p class="text-[10px] text-amber-600 font-bold uppercase mb-1">Penting</p>
-                    <p class="text-[11px] text-amber-700 leading-tight">Setelah transfer, Automaton akan mendeteksi transaksi Anda. Jika dalam 10 menit lisensi belum aktif, hubungi Admin via WhatsApp.</p>
+                    <p class="text-[11px] text-amber-700 leading-tight">Klik tombol di bawah akan menyimpan pesanan dan mengarahkan Anda ke WhatsApp untuk kirim bukti transfer.</p>
                 </div>
 
-                <div class="pt-4 flex justify-between items-center">
+                <div class="pt-4 flex justify-between items-center border-t border-slate-100">
                     <div>
-                        <span class="block text-[10px] text-slate-400 font-bold">TOTAL BAYAR</span>
-                        <span id="final-price-display" class="text-2xl font-black text-indigo-600">Rp 0</span>
+                        <span class="block text-[10px] text-slate-400 font-bold">TOTAL TAGIHAN</span>
+                        <span id="final-price-display" class="text-2xl font-black text-emerald-600">Rp 0</span>
                     </div>
-                    <button type="submit" class="px-8 py-4 bg-slate-900 text-white rounded-2xl font-bold hover:bg-indigo-600 transition">Konfirmasi Bayar</button>
+                    <button type="submit" class="px-8 py-4 bg-slate-900 text-white rounded-2xl font-bold hover:bg-emerald-600 transition flex items-center gap-2">
+                        <i data-lucide="send" class="w-4 h-4"></i> Konfirmasi
+                    </button>
                 </div>
             </form>
         </div>
@@ -273,25 +276,35 @@
             el.select();
             document.execCommand('copy');
             document.body.removeChild(el);
-            alert("Nomor rekening berhasil disalin!");
+            alert("Nomor rekening BSI berhasil disalin!");
         };
 
         document.getElementById('orderForm').onsubmit = async (e) => {
             e.preventDefault();
+            const product = document.getElementById('p-name').value;
             const price = parseInt(document.getElementById('p-price').value);
+            const customer = document.getElementById('c-name').value;
+            const phone = document.getElementById('c-phone').value;
+            
             const data = {
-                customer: document.getElementById('c-name').value,
+                customer: customer,
                 email: document.getElementById('c-email').value,
-                phone: document.getElementById('c-phone').value,
-                product: document.getElementById('p-name').value,
+                phone: phone,
+                product: product,
                 total: price,
                 status: 'Menunggu Aktivasi',
                 licenseKey: '',
                 createdAt: serverTimestamp() || new Date()
             };
+
             try {
                 await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'orders'), data);
-                alert("Konfirmasi Terkirim! Segera lakukan transfer agar Automaton memproses pesanan Anda.");
+                
+                // Redirect to WhatsApp
+                const waMessage = `Halo Admin Zaktoun! Saya baru saja memesan di website.\n\nProduk: ${product}\nTotal: Rp ${price.toLocaleString('id-ID')}\na.n: ${customer}\n\nSaya akan segera mengirimkan bukti transfernya.`;
+                const waUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(waMessage)}`; // GANTI NOMOR WA ANDA DI SINI
+                
+                window.open(waUrl, '_blank');
                 closeModal('orderModal');
                 e.target.reset();
             } catch (err) { closeModal('orderModal'); }
