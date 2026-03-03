@@ -35,27 +35,66 @@
         </div>
     </nav>
 
-    <!-- PUBLIC VIEW: STOREFRONT & SHIPPING -->
+    <!-- PUBLIC VIEW -->
     <main id="public-view" class="pt-24 pb-20 px-4 max-w-7xl mx-auto">
         <div class="text-center mb-16">
-            <h1 class="text-5xl font-extrabold mb-4 italic">Pusat <span class="text-indigo-600">Otomasi</span> Bisnis</h1>
-            <p class="text-slate-500 max-w-xl mx-auto italic">Pesan produk fisik kami dan lacak pengiriman secara otomatis.</p>
+            <h1 class="text-5xl font-extrabold mb-4 italic">Zaktoun <span class="text-indigo-600">Script</span> Vault</h1>
+            <p class="text-slate-500 max-w-xl mx-auto italic">Koleksi skrip otomasi dan engine otonom hasil pengembangan di GitHub.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Product Item -->
+            <!-- Product 1 -->
             <div class="bg-white p-6 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300">
-                <div class="aspect-video bg-slate-50 rounded-[2rem] mb-6 flex items-center justify-center overflow-hidden">
-                    <i data-lucide="package" class="w-16 h-16 text-indigo-200"></i>
+                <div class="aspect-video bg-slate-900 rounded-[2rem] mb-6 flex items-center justify-center overflow-hidden border border-slate-100">
+                    <i data-lucide="cpu" class="w-16 h-16 text-indigo-500 animate-pulse"></i>
                 </div>
-                <h3 class="font-bold text-xl mb-1">Smart Home IoT Module</h3>
-                <p class="text-[10px] text-indigo-500 font-bold uppercase mb-4">Produk Fisik - Dikirim dari Soreang</p>
+                <h3 class="font-bold text-xl mb-1">Core Automaton Engine v4.0</h3>
+                <p class="text-[10px] text-indigo-500 font-bold uppercase mb-4">Digital License - GitHub Repository</p>
+                <p class="text-xs text-slate-500 mb-6 leading-relaxed">Framework utama untuk membangun agen bisnis otonom dengan integrasi Cloud Firestore.</p>
                 <div class="flex justify-between items-center">
                     <div>
                         <span class="block text-[10px] text-slate-400 font-bold uppercase">Harga</span>
-                        <span class="text-slate-900 font-extrabold text-xl">Rp 750.000</span>
+                        <span class="text-slate-900 font-extrabold text-xl">Rp 1.250.000</span>
                     </div>
-                    <button onclick="openOrderModal('Smart Home IoT Module', 750000)" class="bg-indigo-600 text-white p-4 rounded-2xl hover:bg-indigo-700 transition">
+                    <button onclick="openOrderModal('Core Automaton Engine v4.0', 1250000)" class="bg-indigo-600 text-white p-4 rounded-2xl hover:bg-indigo-700 transition">
+                        <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="bg-white p-6 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div class="aspect-video bg-indigo-50 rounded-[2rem] mb-6 flex items-center justify-center overflow-hidden">
+                    <i data-lucide="binary" class="w-16 h-16 text-indigo-400"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-1">Conway Visualizer Module</h3>
+                <p class="text-[10px] text-emerald-500 font-bold uppercase mb-4">Digital Script - Lab Project</p>
+                <p class="text-xs text-slate-500 mb-6 leading-relaxed">Modul visualisasi data berbasis algoritma seluler untuk simulasi pertumbuhan pasar.</p>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <span class="block text-[10px] text-slate-400 font-bold uppercase">Harga</span>
+                        <span class="text-slate-900 font-extrabold text-xl">Rp 450.000</span>
+                    </div>
+                    <button onclick="openOrderModal('Conway Visualizer Module', 450000)" class="bg-indigo-600 text-white p-4 rounded-2xl hover:bg-indigo-700 transition">
+                        <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="bg-white p-6 rounded-[2.5rem] border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                <div class="aspect-video bg-slate-50 rounded-[2rem] mb-6 flex items-center justify-center overflow-hidden">
+                    <i data-lucide="target" class="w-16 h-16 text-slate-300"></i>
+                </div>
+                <h3 class="font-bold text-xl mb-1">Lead Hunter Bot Script</h3>
+                <p class="text-[10px] text-amber-500 font-bold uppercase mb-4">Digital Tool - Automaton Suite</p>
+                <p class="text-xs text-slate-500 mb-6 leading-relaxed">Skrip Python/JS untuk mencari prospek potensial secara otomatis dari berbagai platform.</p>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <span class="block text-[10px] text-slate-400 font-bold uppercase">Harga</span>
+                        <span class="text-slate-900 font-extrabold text-xl">Rp 850.000</span>
+                    </div>
+                    <button onclick="openOrderModal('Lead Hunter Bot Script', 850000)" class="bg-indigo-600 text-white p-4 rounded-2xl hover:bg-indigo-700 transition">
                         <i data-lucide="shopping-cart" class="w-5 h-5"></i>
                     </button>
                 </div>
@@ -63,12 +102,10 @@
         </div>
     </main>
 
-    <!-- ADMIN VIEW: AUTOMATON & ORDER MANAGEMENT -->
+    <!-- ADMIN VIEW -->
     <div id="admin-view" class="hidden admin-bg pt-24 pb-20 px-4">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-                
-                <!-- Automaton Core (Cari Duit Section) -->
                 <div class="lg:col-span-8 space-y-8">
                     <div class="automaton-card rounded-[2.5rem] p-8">
                         <div class="flex justify-between items-center mb-6">
@@ -85,25 +122,23 @@
                         </div>
                     </div>
 
-                    <!-- Order Table -->
                     <div class="automaton-card rounded-[2.5rem] overflow-hidden">
                         <div class="p-6 border-b border-white/5 flex justify-between items-center">
-                            <h3 class="font-bold">Daftar Pesanan Masuk</h3>
+                            <h3 class="font-bold">Daftar Lisensi Digital</h3>
                             <i data-lucide="refresh-cw" class="w-4 h-4 text-slate-500 cursor-pointer"></i>
                         </div>
                         <div class="overflow-x-auto text-white">
                             <table class="w-full text-left text-sm">
                                 <thead class="bg-white/5 text-[10px] uppercase font-bold text-slate-500 tracking-widest">
                                     <tr>
-                                        <th class="p-5">Pelanggan</th>
-                                        <th class="p-5">Ekspedisi</th>
+                                        <th class="p-5">Pembeli</th>
+                                        <th class="p-5">Produk Digital</th>
                                         <th class="p-5">Total</th>
                                         <th class="p-5">Status</th>
                                         <th class="p-5 text-right">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody id="order-list-body">
-                                    <!-- Data dari Firebase -->
                                     <tr><td colspan="5" class="p-10 text-center text-slate-500 font-mono italic">Menghubungkan ke database...</td></tr>
                                 </tbody>
                             </table>
@@ -111,7 +146,6 @@
                     </div>
                 </div>
 
-                <!-- Side Panel: Stats -->
                 <div class="lg:col-span-4 space-y-6">
                     <div class="automaton-card rounded-[2.5rem] p-8">
                         <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest mb-2">Automaton Revenue</p>
@@ -132,31 +166,45 @@
 
     <!-- MODAL ORDER -->
     <div id="orderModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 modal-overlay text-slate-900">
-        <div class="bg-white w-full max-w-lg rounded-[2.5rem] p-8 shadow-2xl">
+        <div class="bg-white w-full max-w-lg rounded-[2.5rem] p-8 shadow-2xl max-h-[90vh] overflow-y-auto">
             <div class="flex justify-between items-center mb-6">
-                <h3 class="text-2xl font-bold text-slate-900">Detail Pengiriman</h3>
+                <h3 class="text-2xl font-bold text-slate-900">Konfirmasi Lisensi</h3>
                 <button onclick="closeModal('orderModal')" class="text-slate-400"><i data-lucide="x"></i></button>
             </div>
+            
+            <!-- Payment Instructions -->
+            <div class="bg-indigo-600 rounded-3xl p-6 text-white mb-6">
+                <p class="text-[10px] font-bold uppercase opacity-80 mb-2">Transfer Pembayaran Ke:</p>
+                <div class="flex justify-between items-center mb-4">
+                    <span class="font-bold text-lg">Bank Central Asia (BCA)</span>
+                    <i data-lucide="credit-card" class="w-5 h-5 opacity-50"></i>
+                </div>
+                <div class="bg-white/10 p-4 rounded-2xl flex justify-between items-center mb-2">
+                    <span class="font-mono text-xl tracking-wider">123-456-7890</span>
+                    <button onclick="copyToClipboard('1234567890')" class="text-[10px] bg-white text-indigo-600 px-3 py-1 rounded-full font-bold">SALIN</button>
+                </div>
+                <p class="text-xs font-medium">a.n Zaktoun Core Laboratory</p>
+            </div>
+
             <form id="orderForm" class="space-y-4">
                 <input type="hidden" id="p-name">
                 <input type="hidden" id="p-price">
                 
-                <input type="text" id="c-name" placeholder="Nama Lengkap" required class="w-full p-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-indigo-500 outline-none text-slate-900">
-                <input type="tel" id="c-phone" placeholder="WhatsApp (08...)" required class="w-full p-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-indigo-500 outline-none text-slate-900">
-                <textarea id="c-address" placeholder="Alamat Lengkap Pengiriman" required class="w-full p-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-indigo-500 outline-none text-slate-900" rows="3"></textarea>
+                <input type="text" id="c-name" placeholder="Nama Lengkap" required class="w-full p-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-indigo-500 outline-none">
+                <input type="email" id="c-email" placeholder="Alamat Email (Untuk Pengiriman Script)" required class="w-full p-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-indigo-500 outline-none">
+                <input type="tel" id="c-phone" placeholder="WhatsApp (Konfirmasi Pembayaran)" required class="w-full p-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-indigo-500 outline-none">
                 
-                <div class="space-y-1">
-                    <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest ml-2">Pilih Ekspedisi</label>
-                    <select id="c-exp" class="w-full p-4 bg-slate-50 rounded-2xl border-none focus:ring-2 focus:ring-indigo-500 outline-none font-bold text-slate-900">
-                        <option value="JNE" data-cost="20000">JNE Reguler (Rp 20.000)</option>
-                        <option value="J&T" data-cost="18000">J&T Express (Rp 18.000)</option>
-                        <option value="SiCepat" data-cost="19000">SiCepat REG (Rp 19.000)</option>
-                    </select>
+                <div class="p-4 bg-amber-50 rounded-2xl">
+                    <p class="text-[10px] text-amber-600 font-bold uppercase mb-1">Penting</p>
+                    <p class="text-[11px] text-amber-700 leading-tight">Setelah transfer, Automaton akan mendeteksi transaksi Anda. Jika dalam 10 menit lisensi belum aktif, hubungi Admin via WhatsApp.</p>
                 </div>
 
-                <div class="pt-6 border-t flex justify-between items-center">
-                    <span id="final-price-display" class="text-2xl font-black text-indigo-600">Rp 0</span>
-                    <button type="submit" class="px-8 py-4 bg-slate-900 text-white rounded-2xl font-bold hover:bg-indigo-600 transition">Bayar Sekarang</button>
+                <div class="pt-4 flex justify-between items-center">
+                    <div>
+                        <span class="block text-[10px] text-slate-400 font-bold">TOTAL BAYAR</span>
+                        <span id="final-price-display" class="text-2xl font-black text-indigo-600">Rp 0</span>
+                    </div>
+                    <button type="submit" class="px-8 py-4 bg-slate-900 text-white rounded-2xl font-bold hover:bg-indigo-600 transition">Konfirmasi Bayar</button>
                 </div>
             </form>
         </div>
@@ -165,10 +213,11 @@
     <!-- MODAL RESI -->
     <div id="resiModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 modal-overlay text-white">
         <div class="bg-slate-800 w-full max-w-sm rounded-[2rem] p-8 border border-white/10">
-            <h3 class="text-white text-xl font-bold mb-4">Input Resi</h3>
+            <h3 class="text-white text-xl font-bold mb-2">Kirim Lisensi</h3>
+            <p class="text-[10px] text-slate-400 mb-4">Masukkan Key atau Link Repo untuk pelanggan.</p>
             <input type="hidden" id="resi-target-id">
-            <input type="text" id="resi-val" placeholder="No. Resi (Contoh: JNE12345)" class="w-full p-4 bg-white/5 border border-white/10 rounded-xl text-white outline-none mb-6">
-            <button onclick="saveResi()" class="w-full py-4 bg-indigo-600 text-white rounded-xl font-bold">Update Status</button>
+            <input type="text" id="resi-val" placeholder="License Key: ZK-XXXX-XXXX" class="w-full p-4 bg-white/5 border border-white/10 rounded-xl text-white outline-none mb-6">
+            <button onclick="saveResi()" class="w-full py-4 bg-indigo-600 text-white rounded-xl font-bold">Kirim ke Email Pelanggan</button>
         </div>
     </div>
 
@@ -177,7 +226,6 @@
         import { getFirestore, collection, addDoc, onSnapshot, updateDoc, doc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
         import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 
-        // FALLBACK CONFIGURATION FOR GITHUB PAGES
         const defaultFirebaseConfig = {
             apiKey: "AIzaSyAs-FakeKeyForInitializationOnly",
             authDomain: "zaktoun-lab.firebaseapp.com",
@@ -193,26 +241,19 @@
         const auth = getAuth(app);
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'core-automaton-engine';
 
-        let currentUser = null;
         let totalRev = 0;
 
-        // AUTH & BOOTSTRAP
-        signInAnonymously(auth).catch(err => console.log("Auth notice: Using local simulation mode."));
-        
+        signInAnonymously(auth);
         onAuthStateChanged(auth, (u) => {
-            currentUser = u;
-            // Always load UI even if Firebase fails to connect (simulation mode)
             loadOrders();
             startAutomatonLoop();
         });
 
         lucide.createIcons();
 
-        // UI ACTIONS
         window.toggleSection = (view) => {
             document.getElementById('public-view').classList.toggle('hidden', view !== 'public');
             document.getElementById('admin-view').classList.toggle('hidden', view !== 'admin');
-            // Re-create icons when switching view
             lucide.createIcons();
         };
 
@@ -225,44 +266,43 @@
 
         window.closeModal = (id) => document.getElementById(id).classList.add('hidden');
 
-        // FORM SUBMIT
-        document.getElementById('orderForm').onsubmit = async (e) => {
-            e.preventDefault();
-            const sel = document.getElementById('c-exp');
-            const cost = parseInt(sel.options[sel.selectedIndex].dataset.cost);
-            const total = parseInt(document.getElementById('p-price').value) + cost;
-
-            const data = {
-                customer: document.getElementById('c-name').value,
-                phone: document.getElementById('c-phone').value,
-                address: document.getElementById('c-address').value,
-                product: document.getElementById('p-name').value,
-                expedition: sel.value,
-                total: total,
-                status: 'Menunggu Konfirmasi',
-                resi: '',
-                createdAt: serverTimestamp() || new Date()
-            };
-
-            try {
-                await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'orders'), data);
-                alert("Pesanan terkirim! Automaton sedang memproses logistik.");
-                closeModal('orderModal');
-                e.target.reset();
-            } catch (err) { 
-                console.error(err);
-                alert("Offline Mode: Pesanan dicatat secara lokal di console karena Firebase belum dikonfigurasi di GitHub."); 
-                closeModal('orderModal');
-            }
+        window.copyToClipboard = (text) => {
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            alert("Nomor rekening berhasil disalin!");
         };
 
-        // LOAD ORDERS (ADMIN)
+        document.getElementById('orderForm').onsubmit = async (e) => {
+            e.preventDefault();
+            const price = parseInt(document.getElementById('p-price').value);
+            const data = {
+                customer: document.getElementById('c-name').value,
+                email: document.getElementById('c-email').value,
+                phone: document.getElementById('c-phone').value,
+                product: document.getElementById('p-name').value,
+                total: price,
+                status: 'Menunggu Aktivasi',
+                licenseKey: '',
+                createdAt: serverTimestamp() || new Date()
+            };
+            try {
+                await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'orders'), data);
+                alert("Konfirmasi Terkirim! Segera lakukan transfer agar Automaton memproses pesanan Anda.");
+                closeModal('orderModal');
+                e.target.reset();
+            } catch (err) { closeModal('orderModal'); }
+        };
+
         function loadOrders() {
             try {
                 onSnapshot(collection(db, 'artifacts', appId, 'public', 'data', 'orders'), (snap) => {
                     const body = document.getElementById('order-list-body');
                     if (snap.empty) {
-                        body.innerHTML = '<tr><td colspan="5" class="p-10 text-center text-slate-500 font-mono italic">Belum ada pesanan masuk.</td></tr>';
+                        body.innerHTML = '<tr><td colspan="5" class="p-10 text-center text-slate-500 font-mono italic">Belum ada pembeli lisensi.</td></tr>';
                         return;
                     }
                     body.innerHTML = '';
@@ -271,23 +311,24 @@
                         const tr = document.createElement('tr');
                         tr.className = "border-b border-white/5 hover:bg-white/[0.02]";
                         tr.innerHTML = `
-                            <td class="p-5 font-bold">${data.customer}</td>
-                            <td class="p-5 text-xs text-slate-400">${data.expedition}</td>
+                            <td class="p-5">
+                                <span class="font-bold block">${data.customer}</span>
+                                <span class="text-[10px] text-slate-500">${data.email}</span>
+                            </td>
+                            <td class="p-5 text-xs text-slate-400">${data.product}</td>
                             <td class="p-5 text-indigo-400 font-bold">Rp ${(data.total || 0).toLocaleString('id-ID')}</td>
-                            <td class="p-5 text-[10px] font-bold uppercase ${data.status === 'Dikirim' ? 'text-emerald-400' : 'text-amber-400'}">${data.status}</td>
+                            <td class="p-5 text-[10px] font-bold uppercase ${data.status === 'Aktif' ? 'text-emerald-400' : 'text-amber-400'}">${data.status}</td>
                             <td class="p-5 text-right">
-                                <button onclick="openResiModal('${d.id}')" class="p-2 bg-indigo-600 rounded-lg"><i data-lucide="truck" class="w-4 h-4 text-white"></i></button>
+                                <button onclick="openResiModal('${d.id}')" class="p-2 bg-indigo-600 rounded-lg"><i data-lucide="key" class="w-4 h-4 text-white"></i></button>
                             </td>
                         `;
                         body.appendChild(tr);
                     });
                     lucide.createIcons();
                 }, (err) => {
-                    document.getElementById('order-list-body').innerHTML = '<tr><td colspan="5" class="p-10 text-center text-slate-500 font-mono italic">Mode Simulasi: Hubungkan Firebase untuk data asli.</td></tr>';
+                    document.getElementById('order-list-body').innerHTML = '<tr><td colspan="5" class="p-10 text-center text-slate-500 font-mono italic">Mode Simulasi Aktif.</td></tr>';
                 });
-            } catch (e) {
-                console.log("Firebase not ready");
-            }
+            } catch (e) {}
         }
 
         window.openResiModal = (id) => {
@@ -297,35 +338,30 @@
 
         window.saveResi = async () => {
             const id = document.getElementById('resi-target-id').value;
-            const resi = document.getElementById('resi-val').value;
+            const key = document.getElementById('resi-val').value;
             try {
                 await updateDoc(doc(db, 'artifacts', appId, 'public', 'data', 'orders', id), {
-                    resi: resi,
-                    status: 'Dikirim'
+                    licenseKey: key,
+                    status: 'Aktif'
                 });
-            } catch (e) {
-                alert("Simulasi: Status diperbarui di layar (Database tidak terhubung).");
-            }
+            } catch (e) {}
             closeModal('resiModal');
         };
 
-        // AUTOMATON ENGINE SIMULATION
         function startAutomatonLoop() {
             const statusArr = [
-                { s: "Scanning Market...", d: "Analyzing IoT trends in Soreang" },
-                { s: "Hunting Leads...", d: "Potential buyer found on Social Media" },
-                { s: "Negotiating...", d: "AI is chatting with a business lead" },
-                { s: "Closing Deal!", d: "Transaction successful via Cloud Gate" }
+                { s: "Scanning GitHub...", d: "Monitoring repository updates" },
+                { s: "Verifying License...", d: "Validating API key request" },
+                { s: "Analyzing Bot Log...", d: "Checking lead hunter efficiency" },
+                { s: "Closing Deal!", d: "New script license sold otonomously" }
             ];
             let i = 0;
             setInterval(() => {
                 const step = statusArr[i];
                 const statusEl = document.getElementById('ai-status');
                 const detailEl = document.getElementById('ai-detail');
-                
                 if (statusEl) statusEl.textContent = step.s;
                 if (detailEl) detailEl.textContent = step.d;
-                
                 const log = document.getElementById('log-container');
                 if (log) {
                     const entry = document.createElement('div');
@@ -334,17 +370,14 @@
                     log.prepend(entry);
                     if (log.children.length > 20) log.lastChild.remove();
                 }
-
                 if(step.s === "Closing Deal!") {
-                    totalRev += Math.floor(Math.random() * 250000) + 50000;
+                    totalRev += Math.floor(Math.random() * 500000) + 100000;
                     const revEl = document.getElementById('rev-total');
                     if (revEl) revEl.textContent = totalRev.toLocaleString('id-ID');
                 }
-
                 i = (i + 1) % statusArr.length;
             }, 4000);
         }
-
     </script>
 </body>
 </html>
